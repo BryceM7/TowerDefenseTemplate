@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Solider
 
 
 @export var speed = 100

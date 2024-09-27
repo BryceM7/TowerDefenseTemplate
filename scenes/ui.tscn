@@ -9,16 +9,16 @@ follow_viewport_enabled = true
 anchors_preset = -1
 anchor_left = -0.5
 anchor_right = -0.5
-offset_left = -192.0
+offset_left = -212.0
 offset_top = -320.0
-offset_right = 128.0
-offset_bottom = 1728.0
+offset_right = 98.0
+offset_bottom = 1365.0
 
 [node name="FlowContainer" type="FlowContainer" parent="Panel"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 64.0
-offset_right = 235.0
+offset_right = 234.0
 offset_bottom = 683.0
 scale = Vector2(3, 3)
 theme_override_constants/h_separation = 10
@@ -41,7 +41,4 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="RedTowerPanel6" parent="Panel/FlowContainer" instance=ExtResource("1_j1d51")]
-layout_mode = 2
-
-[node name="RedTowerPanel7" parent="Panel/FlowContainer" instance=ExtResource("1_j1d51")]
 layout_mode = 2

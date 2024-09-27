@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://cce8o34cq02ts"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_emywa"]
+[ext_resource type="FontFile" uid="uid://bqqtquirnw00f" path="res://Font/Soulmeh.otf" id="2_2gyi5"]
+[ext_resource type="Texture2D" uid="uid://bvcahskk0tkjb" path="res://Font/tankbackground.png" id="2_vem2i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nxbha"]
+texture = ExtResource("2_vem2i")
+modulate_color = Color(0.377919, 0.377919, 0.377919, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnirg"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -5.0
+offset_right = 1.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_emywa")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_nxbha")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -471.5
+offset_top = -285.0
+offset_right = 471.5
+offset_bottom = 285.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0.447059, 0, 1)
+theme_override_fonts/font = ExtResource("2_2gyi5")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_xnirg")
+text = "Start"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.593823, 0.11305, 0.111462, 1)
+theme_override_fonts/font = ExtResource("2_2gyi5")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_xnirg")
+text = "Exit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_left = 1004.0
+offset_top = 42.0
+offset_right = 1281.0
+offset_bottom = 179.0
+text = "Shooting TD"

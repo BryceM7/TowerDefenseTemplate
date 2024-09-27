@@ -3,5 +3,5 @@ extends Node
 @onready var path = preload("res://scenes/Stage 1.tscn")
 
 func _on_timer_timeout():
-    var tempPath = path.instantiate()
-    add_child(tempPath)
+	var tempPath = path.instantiate()
+	add_child(tempPath)

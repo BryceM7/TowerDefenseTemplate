@@ -13,6 +13,8 @@ func _on_gui_input(event:InputEvent):
 		add_child(tempTower)
 
 		tempTower.process_mode = Node.PROCESS_MODE_DISABLED
+
+		tempTower.scale = Vector2(0.32,0.32)
 	elif event is InputEventMouseMotion and event.button_mask == 1:
 		#left click down drag
 		get_child(1).global_position = mousePosition
@@ -23,5 +25,5 @@ func _on_gui_input(event:InputEvent):
 		var path = get_tree().get_root().get_node("Main/Towers")
 
 		path.add_child(tempTower)
-		tempTower.global_position = event.global_position
+		tempTower.global_position = mousePosition
 		tempTower.get_node("Area").hide()

@@ -21,15 +21,13 @@ func _on_gui_input(event:InputEvent):
 			get_child(1).global_position = mousePosition
 	elif event is InputEventMouseButton and event.button_mask == 0:
 		#Left click up
-		if event.global_position.x >= -1362:
-			if get_child_count() > 1:
-				get_child(1).queue_free()
+		
 
-		else:
-			var path = get_tree().get_root().get_node("Main/Towers")
-			path.add_child(tempTower)
-			tempTower.global_position = mousePosition
-			tempTower.get_node("Area").hide()
+
+		var path = get_tree().get_root().get_node("Main/Towers")
+		path.add_child(tempTower)
+		tempTower.global_position = mousePosition
+		tempTower.get_node("Area").hide()
 
 	else:
 		if get_child_count() > 1:

@@ -17,8 +17,9 @@ func _on_gui_input(event:InputEvent):
 		tempTower.scale = Vector2(0.32,0.32)
 	elif event is InputEventMouseMotion and event.button_mask == 1:
 		#left click down drag
-		if get_child_count() > 1:
-			get_child(1).global_position = mousePosition
+		get_child(1).global_position = get_global_mouse_position()
+		tempTower.global_position = get_global_mouse_position()
+	elif event is InputEventMouseButton and event.button_mask == 0:
 
 
 		#Left click up

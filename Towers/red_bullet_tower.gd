@@ -1,5 +1,5 @@
 extends StaticBody2D
-
+class_name red_bullet_tower
 var Bullet = preload("res://Towers/red_bullet.tscn")
 var bulletDamage = 5
 var pathName

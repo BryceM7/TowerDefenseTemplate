@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cce8o34cq02ts"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_emywa"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_emywa"]
 [ext_resource type="FontFile" uid="uid://bqqtquirnw00f" path="res://Font/Soulmeh.otf" id="2_2gyi5"]
 [ext_resource type="Texture2D" uid="uid://bvcahskk0tkjb" path="res://Font/tankbackground.png" id="2_vem2i"]
 
@@ -8,12 +8,7 @@
 texture = ExtResource("2_vem2i")
 modulate_color = Color(0.377919, 0.377919, 0.377919, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnirg"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d0t2o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtbsx"]
 bg_color = Color(0.741385, 0.741385, 0.741385, 1)
@@ -29,7 +24,12 @@ corner_radius_top_right = 60
 corner_radius_bottom_right = 60
 corner_radius_bottom_left = 60
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d0t2o"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnirg"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -71,31 +71,31 @@ theme_override_constants/separation = 20
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0.447059, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.447059, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0.447059, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.447059, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0.447059, 0, 1)
+theme_override_colors/font_color = Color(0, 0.447059, 0, 1)
 theme_override_fonts/font = ExtResource("2_2gyi5")
 theme_override_font_sizes/font_size = 90
-theme_override_styles/normal = SubResource("StyleBoxFlat_xnirg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d0t2o")
 theme_override_styles/hover = SubResource("StyleBoxFlat_dtbsx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xnlch")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_d0t2o")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xnirg")
 text = "Start"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.593823, 0.11305, 0.111462, 1)
-theme_override_colors/font_pressed_color = Color(0.593823, 0.11305, 0.111462, 1)
 theme_override_colors/font_hover_color = Color(0.593823, 0.11305, 0.111462, 1)
+theme_override_colors/font_pressed_color = Color(0.593823, 0.11305, 0.111462, 1)
 theme_override_colors/font_focus_color = Color(0.593823, 0.11305, 0.111462, 1)
+theme_override_colors/font_color = Color(0.593823, 0.11305, 0.111462, 1)
 theme_override_fonts/font = ExtResource("2_2gyi5")
 theme_override_font_sizes/font_size = 90
-theme_override_styles/normal = SubResource("StyleBoxFlat_xnirg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d0t2o")
 theme_override_styles/hover = SubResource("StyleBoxFlat_dtbsx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_xnlch")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_d0t2o")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xnirg")
 text = "Exit
 "
 

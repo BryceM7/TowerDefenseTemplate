@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhl7jvkihyaqv"]
+[gd_scene load_steps=4 format=3 uid="uid://bhl7jvkihyaqv"]
 
 [ext_resource type="PackedScene" uid="uid://dn6pl3845sl8d" path="res://Towers/RedTowerPanel.tscn" id="1_j1d51"]
+[ext_resource type="PackedScene" uid="uid://l0ywa6t0pgxs" path="res://green_tower_panel.tscn" id="2_dq4ky"]
+[ext_resource type="PackedScene" uid="uid://cmjhgbrwrk6v6" path="res://m_tower_panel.tscn" id="3_rmurr"]
 
 [node name="UI" type="CanvasLayer"]
 follow_viewport_enabled = true
@@ -28,17 +30,10 @@ vertical = true
 [node name="RedTowerPanel" parent="Panel/FlowContainer" instance=ExtResource("1_j1d51")]
 layout_mode = 2
 
-[node name="RedTowerPanel2" parent="Panel/FlowContainer" instance=ExtResource("1_j1d51")]
+[node name="GreenTowerPanel" parent="Panel/FlowContainer" instance=ExtResource("2_dq4ky")]
 layout_mode = 2
 
-[node name="RedTowerPanel3" parent="Panel/FlowContainer" instance=ExtResource("1_j1d51")]
+[node name="MTowerPanel" parent="Panel/FlowContainer" instance=ExtResource("3_rmurr")]
 layout_mode = 2
 
-[node name="RedTowerPanel4" parent="Panel/FlowContainer" instance=ExtResource("1_j1d51")]
-layout_mode = 2
-
-[node name="RedTowerPanel5" parent="Panel/FlowContainer" instance=ExtResource("1_j1d51")]
-layout_mode = 2
-
-[node name="RedTowerPanel6" parent="Panel/FlowContainer" instance=ExtResource("1_j1d51")]
-layout_mode = 2
+[connection signal="gui_input" from="Panel/FlowContainer/GreenTowerPanel" to="Panel/FlowContainer/RedTowerPanel" method="_on_green_tower_panel_gui_input"]

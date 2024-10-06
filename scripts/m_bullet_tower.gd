@@ -1,7 +1,7 @@
 extends red_bullet_tower
 
 func _ready():
-	bulletDamage = 10
+	bulletDamage = 20
 
 func _process(delta):
 	if is_instance_valid(curr):

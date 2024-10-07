@@ -12,3 +12,5 @@ script = ExtResource("1_vkmf3")
 [node name="TowerDefenseTile249" type="Sprite2D" parent="."]
 position = Vector2(40, 35)
 texture = ExtResource("1_2kx0d")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

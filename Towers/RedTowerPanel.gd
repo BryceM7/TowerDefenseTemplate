@@ -1,11 +1,11 @@
 extends Panel
 
-@onready var tower = preload("res://Towers/green_bullet_tower.tscn")
+@onready var tower = preload("res://Towers/red_bullet_tower.tscn")
 var currTile
 
 
 
-func _on_green_tower_panel_gui_input(event:InputEvent) -> void:
+func _on_gui_input(event:InputEvent):
 	var tempTower = tower.instantiate()
 	var mousePosition = get_global_mouse_position()
 	if event is InputEventMouseButton and event.button_mask == 1:

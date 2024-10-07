@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b141fe2nclflc"]
+[gd_scene load_steps=7 format=3 uid="uid://b141fe2nclflc"]
 
 [ext_resource type="PackedScene" uid="uid://qvgb2mggkn5t" path="res://scenes/Tiles/TileMap.tscn" id="1_q80gn"]
 [ext_resource type="Script" path="res://scripts/PathSpawner.gd" id="2_shfdd"]
 [ext_resource type="PackedScene" uid="uid://bhl7jvkihyaqv" path="res://scenes/ui.tscn" id="4_euve2"]
 [ext_resource type="PackedScene" uid="uid://dinryuu3qbxds" path="res://killzone.tscn" id="4_mmlnd"]
+[ext_resource type="AudioStream" uid="uid://d0mxj7qthp4gr" path="res://Music/magic_mush_0.mp3" id="5_a6r85"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_khu6t"]
 normal = Vector2(-1, 0)
@@ -35,5 +36,9 @@ position = Vector2(3666, 985)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(-54, 49)
 shape = SubResource("WorldBoundaryShape2D_khu6t")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_a6r85")
+autoplay = true
 
 [connection signal="timeout" from="PathSpawner/Timer" to="PathSpawner" method="_on_timer_timeout"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cce8o34cq02ts"]
+[gd_scene load_steps=10 format=3 uid="uid://cce8o34cq02ts"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_emywa"]
 [ext_resource type="FontFile" uid="uid://bqqtquirnw00f" path="res://Font/Soulmeh.otf" id="2_2gyi5"]
 [ext_resource type="Texture2D" uid="uid://bvcahskk0tkjb" path="res://Font/tankbackground.png" id="2_vem2i"]
+[ext_resource type="AudioStream" uid="uid://vn7abnbhj7ii" path="res://Music/magetheme.mp3" id="4_4l66k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nxbha"]
 texture = ExtResource("2_vem2i")
@@ -120,6 +121,10 @@ theme_override_font_sizes/font_size = 160
 text = "Shooting TD"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_4l66k")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_exit_pressed"]

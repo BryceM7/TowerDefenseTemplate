@@ -2,7 +2,7 @@ extends Panel
 
 @onready var tower = preload("res://Towers/red_bullet_tower.tscn")
 var currTile
-
+@onready var game_manager = get_tree().get_root().get_node("Main/GameManager")
 
 
 func _on_gui_input(event:InputEvent):
@@ -15,6 +15,8 @@ func _on_gui_input(event:InputEvent):
 		tempTower.process_mode = Node.PROCESS_MODE_DISABLED
 
 		tempTower.scale = Vector2(0.32,0.32)
+
+		game_manager.lose_pointr()
 	elif event is InputEventMouseMotion and event.button_mask == 1:
 		#left click down drag
 		get_child(1).global_position = get_global_mouse_position()

@@ -1,10 +1,11 @@
 extends CharacterBody2D
 class_name Solider
 
-
+@onready var game_manager = get_tree().get_root().get_node("Main/GameManager")
 @export var speed = 100
+
 var Health = 10
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	var path : PathFollow2D = get_parent()
 	path.set_progress(path.get_progress() + speed*delta)
@@ -13,4 +14,6 @@ func _process(delta):
 
 
 	if Health <= 0:
-		get_parent().get_parent().queue_free()
+		if path.get_parent():  
+			path.get_parent().queue_free()
+			game_manager.add_point()

@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b141fe2nclflc"]
+[gd_scene load_steps=9 format=3 uid="uid://b141fe2nclflc"]
 
 [ext_resource type="PackedScene" uid="uid://qvgb2mggkn5t" path="res://scenes/Tiles/TileMap.tscn" id="1_q80gn"]
+[ext_resource type="Script" path="res://game_manager.gd" id="1_qilb5"]
+[ext_resource type="FontFile" uid="uid://bqqtquirnw00f" path="res://Font/Soulmeh.otf" id="2_hjof7"]
 [ext_resource type="Script" path="res://scripts/PathSpawner.gd" id="2_shfdd"]
 [ext_resource type="PackedScene" uid="uid://bhl7jvkihyaqv" path="res://scenes/ui.tscn" id="4_euve2"]
 [ext_resource type="PackedScene" uid="uid://dinryuu3qbxds" path="res://killzone.tscn" id="4_mmlnd"]
@@ -11,6 +13,20 @@ normal = Vector2(-1, 0)
 distance = 35.3197
 
 [node name="Main" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_qilb5")
+
+[node name="MoneyLabel" type="Label" parent="GameManager"]
+offset_left = 2495.0
+offset_top = -615.0
+offset_right = 3622.0
+offset_bottom = -382.0
+theme_override_fonts/font = ExtResource("2_hjof7")
+theme_override_font_sizes/font_size = 100
+text = "Money:"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1303, 697)

@@ -1,5 +1,11 @@
-Music from Aron Elal called "magic mush" on opengameart.org
+Main game music from Aron Elal called "magic mush" on opengameart.org
+
+Menu music from MAOU called "Mage theme" on opengameart.org
 
 Tile map and sprites from Kenny called "Tower Defense (300 tiles/sprites)" on opengameart.org
 
 Font from MJType called "Soulmeh" on dafont.com
+
+Used "How to make a Video Game - Godot Beginner Tutorial" by Brackeys on Youtube for help
+
+Used "2D Tower Defense In Godot 4.0" by Coding Quests for help
